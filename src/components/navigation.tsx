@@ -9,6 +9,9 @@ const NavigationItem = styled.div`
   color: white;
   padding: 15px;
   animation: ${fadeInDelayed50} 3s ease-in-out;
+  :hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const NavigationItems = [

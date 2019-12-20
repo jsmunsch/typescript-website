@@ -2,12 +2,10 @@ import React from "react";
 import { Header } from "./components/header";
 import { Navigation, NavigationItems } from "./components/navigation";
 import { Center } from "./components/center";
-import { Button } from "./components/button";
+
 import { Background } from "./components/background";
-import { Welcome } from "./components/welcome";
-import { ButtonBox } from "./components/buttonBox";
-import { Message } from "./components/Message";
-import { RandomText, Skills } from "./components/randomText";
+
+import { Home } from "./pages/Home";
 
 const App: React.FC = () => {
   return (
@@ -16,14 +14,7 @@ const App: React.FC = () => {
         <Navigation items={NavigationItems} />
       </Header>
       <Center>
-        <Welcome>
-          <Message text="{Developer}" />
-          <ButtonBox>
-            <Button text="Contact" />
-            <Button text="Resume" />
-          </ButtonBox>
-        </Welcome>
-        <RandomText skills={Skills} />
+        <Home />
       </Center>
     </Background>
   );
