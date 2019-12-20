@@ -8,7 +8,7 @@ const StyledButton = styled.button`
   margin: 5px;
   padding: 20px;
   width: 170px;
-  font-size: 20px;
+  font-size: 1.8em;
   outline: none;
   :hover {
     transform: scale(1.05);

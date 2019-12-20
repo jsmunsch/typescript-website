@@ -16,7 +16,7 @@ const App: React.FC = () => {
       </Header>
       <Center>
         <Welcome>
-          <Message text="Developer" />
+          <Message text="{Developer}" />
           <ButtonBox>
             <Button text="Contact" />
             <Button text="Resume" />

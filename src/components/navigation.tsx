@@ -4,8 +4,9 @@ import styled from "styled-components";
 const NavigationItem = styled.div`
   background: transparent;
   margin: 20px;
-  font-size: 20px;
+  font-size: 1.4em;
   color: white;
+  padding: 15px;
 `;
 
 export const NavigationItems = [
@@ -25,7 +26,7 @@ interface Items {
 export const Navigation: React.FC<Items> = ({ items }) => {
   return (
     <>
-      {items.map<any>(item => {
+      {items.map(item => {
         return (
           <NavigationItem onClick={() => console.log(item)}>
             {item.name}
