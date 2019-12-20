@@ -1,11 +1,13 @@
 import React from "react";
-import "./App.css";
-import { Header, NavigationItems } from "./components/header";
+import { Header } from "./components/header";
+import { Navigation, NavigationItems } from "./components/navigation";
 
 const App: React.FC = () => {
   return (
     <div>
-      <Header text="Hello" items={NavigationItems} />
+      <Header text="Hello">
+        <Navigation items={NavigationItems} />
+      </Header>
     </div>
   );
 };
