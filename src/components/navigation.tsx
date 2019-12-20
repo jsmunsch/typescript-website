@@ -2,7 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const NavigationItem = styled.div`
-  color: yellow;
+  background: transparent;
+  margin: 20px;
+  font-size: 20px;
+  color: white;
 `;
 
 export const NavigationItems = [
@@ -21,10 +24,14 @@ interface Items {
 }
 export const Navigation: React.FC<Items> = ({ items }) => {
   return (
-    <div>
+    <>
       {items.map<any>(item => {
-        return <NavigationItem onClick={() => console.log(item)} />;
+        return (
+          <NavigationItem onClick={() => console.log(item)}>
+            {item.name}
+          </NavigationItem>
+        );
       })}
-    </div>
+    </>
   );
 };

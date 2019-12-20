@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const MainArea = styled.section`
   display: flex;
-  height: 100vh;
-  background: teal;
+  height: 92vh;
+  background: transparent;
   justify-content: center;
   align-items: center;
 `;

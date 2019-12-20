@@ -5,19 +5,11 @@ const HeaderBox = styled.section`
   width: 100vw;
   height: 8vh;
   display: flex;
-  background: red;
+  background: transparent;
   justify-content: flex-end;
   align-items: center;
 `;
 
-interface Props {
-  text: string;
-}
-
-export const Header: React.FC<Props> = ({ text }) => {
-  return (
-    <HeaderBox>
-      <ul>{text}</ul>
-    </HeaderBox>
-  );
+export const Header: React.FC = ({ children }) => {
+  return <HeaderBox>{children}</HeaderBox>;
 };
