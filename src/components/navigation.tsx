@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { fadeInDelayed50 } from "../animations/fadeIn";
 
 const NavigationItem = styled.div`
   background: transparent;
@@ -7,6 +8,7 @@ const NavigationItem = styled.div`
   font-size: 1.4em;
   color: white;
   padding: 15px;
+  animation: ${fadeInDelayed50} 3s ease-in-out;
 `;
 
 export const NavigationItems = [
@@ -17,11 +19,11 @@ export const NavigationItems = [
   { name: "CONTACT" }
 ];
 
-interface Object {
+interface NavItem {
   name: string;
 }
 interface Items {
-  items: Array<Object>;
+  items: Array<NavItem>;
 }
 export const Navigation: React.FC<Items> = ({ items }) => {
   return (

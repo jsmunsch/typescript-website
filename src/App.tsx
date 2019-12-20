@@ -7,6 +7,7 @@ import { Background } from "./components/background";
 import { Welcome } from "./components/welcome";
 import { ButtonBox } from "./components/buttonBox";
 import { Message } from "./components/Message";
+import { RandomText, Skills } from "./components/randomText";
 
 const App: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const App: React.FC = () => {
             <Button text="Resume" />
           </ButtonBox>
         </Welcome>
+        <RandomText skills={Skills} />
       </Center>
     </Background>
   );

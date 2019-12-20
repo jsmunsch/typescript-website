@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { fadeIn } from "../animations/fadeIn";
 
 const StyledDiv = styled.h1`
   color: white;
   font-size: 6em;
   margin: 20px;
+  animation: ${fadeIn} 3s ease-in-out;
 `;
 
 interface Message {
