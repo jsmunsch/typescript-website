@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { fadeInDelayed50 } from "../animations/fadeIn";
+import { useHistory } from "react-router-dom";
 
 const NavigationItem = styled.div`
   background: transparent;
@@ -15,11 +16,11 @@ const NavigationItem = styled.div`
 `;
 
 export const NavigationItems = [
-  { name: "HOME" },
-  { name: "PORTFOLIO" },
-  { name: "ABOUT" },
-  { name: "RESUME" },
-  { name: "CONTACT" }
+  { name: "home" },
+  { name: "portfolio" },
+  { name: "about" },
+  { name: "resume" },
+  { name: "contact" }
 ];
 
 interface NavItem {
@@ -29,11 +30,12 @@ interface Items {
   items: Array<NavItem>;
 }
 export const Navigation: React.FC<Items> = ({ items }) => {
+  let history = useHistory();
   return (
     <>
       {items.map(item => {
         return (
-          <NavigationItem onClick={() => console.log(item)}>
+          <NavigationItem onClick={() => history.push(`/${item.name}`)}>
             {item.name}
           </NavigationItem>
         );
