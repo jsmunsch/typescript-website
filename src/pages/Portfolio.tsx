@@ -42,8 +42,8 @@ const HighlightsContainer = styled.div`
 const Highlight = styled.div`
   color: white;
   background: orange;
-  margin-right: 5%;
-  margin-bottom: 2%;
+  margin-right: 6%;
+  margin-bottom: 4%;
   padding: 6px;
   font-size: 1.2em;
   height: fit-content;
@@ -63,17 +63,21 @@ export const Portfolio: React.FC = () => {
         <h3>Highlights</h3>
         <HighlightsContainer>
           <Highlight>React</Highlight>
-          <Highlight>React_Router</Highlight>
-          <Highlight>React</Highlight>
-          <Highlight>React_Router</Highlight>
-          <Highlight>React</Highlight>
-          <Highlight>React_Router</Highlight>
-          <Highlight>React</Highlight>
-          <Highlight>React_Router</Highlight>
-          <Highlight>React</Highlight>
-          <Highlight>React_Router</Highlight>
-          <Highlight>React</Highlight>
-          <Highlight>React_Router</Highlight>
+          <Highlight>React Router</Highlight>
+          <Highlight>Node.js</Highlight>
+          <Highlight>Styled-Components</Highlight>
+          <Highlight>PropTypes</Highlight>
+          <Highlight>Storybook</Highlight>
+          <Highlight>MongoDB</Highlight>
+          <Highlight>Express</Highlight>
+          <Highlight>Cookies</Highlight>
+          <Highlight>localStorage</Highlight>
+          <Highlight>npm</Highlight>
+          <Highlight>Git Workflow</Highlight>
+          <Highlight>JSON</Highlight>
+          <Highlight>Heroku</Highlight>
+          <Highlight>Adobe XD</Highlight>
+          <Highlight>Boardgameatlas API</Highlight>
         </HighlightsContainer>
       </DescriptionContainer>
     </OuterBox>
