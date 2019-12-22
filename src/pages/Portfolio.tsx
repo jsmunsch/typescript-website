@@ -1,54 +1,13 @@
 import React from "react";
-import styled from "styled-components";
+import OuterBox from "../components/portfolio/OuterBox";
+import ImageContainer from "../components/portfolio/ImageContainer";
+import PortfolioImage from "../components/portfolio/PortfolioImage";
+import DescriptionContainer from "../components/portfolio/DescriptionContainer";
+import PortfolioTitle from "../components/portfolio/PortfolioTitle";
+import PortfolioNavigation from "../components/portfolio/PortfolioNavigation";
+import HighlightsContainer from "../components/portfolio/HighlightsContainer";
+import Highlight from "../components/portfolio/Highlight";
 
-const OuterBox = styled.div`
-  width: 80%;
-  height: 70%;
-  background: transparent;
-  display: flex;
-  border: 1px solid white;
-`;
-
-const PortfolioImage = styled.img`
-  object-fit: cover;
-  object-position: center center;
-  max-width: 100%;
-  max-height: 100%;
-`;
-
-const ImageContainer = styled.div`
-  width: 60%;
-`;
-
-const DescriptionContainer = styled.div`
-  width: 40%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-`;
-
-const PortfolioTitle = styled.h1`
-  text-align: center;
-  font-size: 2.2em;
-`;
-
-const HighlightsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-start;
-`;
-
-const Highlight = styled.div`
-  color: white;
-  background: orange;
-  margin-right: 6%;
-  margin-bottom: 4%;
-  padding: 6px;
-  font-size: 1.2em;
-  height: fit-content;
-  width: fit-content;
-`;
 export const Portfolio: React.FC = () => {
   return (
     <OuterBox>
@@ -60,7 +19,10 @@ export const Portfolio: React.FC = () => {
       </ImageContainer>
       <DescriptionContainer>
         <PortfolioTitle>Boardhero</PortfolioTitle>
-        <h3>Highlights</h3>
+        <PortfolioNavigation>
+          <h3>Highlights</h3>
+          <h3>Description</h3>
+        </PortfolioNavigation>
         <HighlightsContainer>
           <Highlight>React</Highlight>
           <Highlight>React Router</Highlight>
