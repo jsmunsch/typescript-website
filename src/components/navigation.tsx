@@ -16,15 +16,16 @@ const NavigationItem = styled.div`
 `;
 
 export const NavigationItems = [
-  { name: "home" },
-  { name: "portfolio" },
-  { name: "about" },
-  { name: "resume" },
-  { name: "contact" }
+  { name: "home", url: "" },
+  { name: "portfolio", url: "portfolio/Highlights" },
+  { name: "about", url: "about" },
+  { name: "resume", url: "resume" },
+  { name: "contact", url: "contact" }
 ];
 
 interface NavItem {
   name: string;
+  url: string;
 }
 interface Items {
   items: Array<NavItem>;
@@ -35,7 +36,7 @@ export const Navigation: React.FC<Items> = ({ items }) => {
     <>
       {items.map(item => {
         return (
-          <NavigationItem onClick={() => history.push(`/${item.name}`)}>
+          <NavigationItem onClick={() => history.push(`/${item.url}`)}>
             {item.name}
           </NavigationItem>
         );

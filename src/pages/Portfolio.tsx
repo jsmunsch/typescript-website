@@ -7,6 +7,8 @@ import PortfolioTitle from "../components/portfolio/PortfolioTitle";
 import PortfolioNavigation from "../components/portfolio/PortfolioNavigation";
 import HighlightsContainer from "../components/portfolio/HighlightsContainer";
 import Highlight from "../components/portfolio/Highlight";
+import { NavLink } from "../components/portfolio/NavLink";
+import { Switch, Route } from "react-router-dom";
 
 export const Portfolio: React.FC = () => {
   return (
@@ -20,27 +22,34 @@ export const Portfolio: React.FC = () => {
       <DescriptionContainer>
         <PortfolioTitle>Boardhero</PortfolioTitle>
         <PortfolioNavigation>
-          <h3>Highlights</h3>
-          <h3>Description</h3>
+          <NavLink text="Highlights" />
+          <NavLink text="Description" />
         </PortfolioNavigation>
-        <HighlightsContainer>
-          <Highlight>React</Highlight>
-          <Highlight>React Router</Highlight>
-          <Highlight>Node.js</Highlight>
-          <Highlight>Styled-Components</Highlight>
-          <Highlight>PropTypes</Highlight>
-          <Highlight>Storybook</Highlight>
-          <Highlight>MongoDB</Highlight>
-          <Highlight>Express</Highlight>
-          <Highlight>Cookies</Highlight>
-          <Highlight>localStorage</Highlight>
-          <Highlight>npm</Highlight>
-          <Highlight>Git Workflow</Highlight>
-          <Highlight>JSON</Highlight>
-          <Highlight>Heroku</Highlight>
-          <Highlight>Adobe XD</Highlight>
-          <Highlight>Boardgameatlas API</Highlight>
-        </HighlightsContainer>
+        <Switch>
+          <Route exact path="/portfolio/Highlights">
+            <HighlightsContainer>
+              <Highlight>React</Highlight>
+              <Highlight>React Router</Highlight>
+              <Highlight>Node.js</Highlight>
+              <Highlight>Styled-Components</Highlight>
+              <Highlight>PropTypes</Highlight>
+              <Highlight>Storybook</Highlight>
+              <Highlight>MongoDB</Highlight>
+              <Highlight>Express</Highlight>
+              <Highlight>Cookies</Highlight>
+              <Highlight>localStorage</Highlight>
+              <Highlight>npm</Highlight>
+              <Highlight>Git Workflow</Highlight>
+              <Highlight>JSON</Highlight>
+              <Highlight>Heroku</Highlight>
+              <Highlight>Adobe XD</Highlight>
+              <Highlight>Boardgameatlas API</Highlight>
+            </HighlightsContainer>
+          </Route>
+          <Route exact path="/portfolio/Description">
+            <h4>Hallo</h4>
+          </Route>
+        </Switch>
       </DescriptionContainer>
     </OuterBox>
   );

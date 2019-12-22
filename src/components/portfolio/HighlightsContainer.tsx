@@ -5,6 +5,7 @@ const HighlightsContainer = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
+  overflow: scroll;
 `;
 
 export default HighlightsContainer;

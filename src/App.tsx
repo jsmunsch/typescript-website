@@ -7,6 +7,7 @@ import { Background } from "./components/background";
 
 import { Home } from "./pages/Home";
 import { Portfolio } from "./pages/Portfolio";
+import GlobalStyle from "./GlobalStyle";
 
 const App: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const App: React.FC = () => {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/portfolio">
+            <Route path="/portfolio">
               <Portfolio />
             </Route>
           </Switch>
