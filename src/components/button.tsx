@@ -6,9 +6,9 @@ const StyledButton = styled.button`
   border: 2px solid white;
   color: white;
   margin: 5px;
-  padding: 20px;
-  width: 170px;
-  font-size: 1.8em;
+  padding: 2vw;
+  width: 30vw;
+  font-size: 3vw;
   outline: none;
   :hover {
     transform: scale(1.05);

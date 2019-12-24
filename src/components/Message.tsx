@@ -4,7 +4,7 @@ import { fadeIn } from "../animations/fadeIn";
 
 const StyledDiv = styled.h1`
   color: white;
-  font-size: 6em;
+  font-size: 8vw;
   margin: 20px;
   animation: ${fadeIn} 3s ease-in-out;
 `;
