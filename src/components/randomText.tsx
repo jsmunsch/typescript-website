@@ -4,8 +4,8 @@ import styled from "styled-components";
 const AppearingSkills = styled.h3<CoordProps>`
   color: white;
   position: absolute;
-  top: ${props => props.x_coordinates};
-  left: ${props => props.y_coordinates};
+  top: ${props => props.x_coordinates}px;
+  left: ${props => props.y_coordinates}px;
 `;
 
 export const Skills = [
@@ -27,8 +27,8 @@ interface Skills {
   skills: Array<SkillItems>;
 }
 
-const ww: number = window.innerWidth;
-const wh: number = window.innerHeight;
+const ww: number = window.innerWidth - 200;
+const wh: number = window.innerHeight - 200;
 
 export const RandomText: React.FC<Skills> = ({ skills }) => {
   return (
@@ -36,7 +36,7 @@ export const RandomText: React.FC<Skills> = ({ skills }) => {
       {skills.map(skill => {
         let x: number = Math.random() * ww;
         let y: number = Math.random() * wh;
-
+        console.log(ww);
         console.log(x);
         console.log(y);
         console.log(skill.name);
