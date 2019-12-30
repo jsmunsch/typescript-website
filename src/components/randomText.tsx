@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { appear } from "../animations/appear";
 
 const AppearingSkills = styled.h3<CoordProps>`
   color: white;
   position: absolute;
   top: ${props => props.x_coordinates}px;
   left: ${props => props.y_coordinates}px;
+  animation: ${appear} 4s ease-in-out infinite;
 `;
 
 export const Skills = [
@@ -27,8 +29,8 @@ interface Skills {
   skills: Array<SkillItems>;
 }
 
-const ww: number = window.innerWidth - 200;
-const wh: number = window.innerHeight - 200;
+const ww: number = window.innerWidth;
+const wh: number = window.innerHeight;
 
 export const RandomText: React.FC<Skills> = ({ skills }) => {
   return (
@@ -40,6 +42,7 @@ export const RandomText: React.FC<Skills> = ({ skills }) => {
         console.log(x);
         console.log(y);
         console.log(skill.name);
+
         return (
           <AppearingSkills x_coordinates={x} y_coordinates={y}>
             {skill.name}
