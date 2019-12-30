@@ -14,8 +14,8 @@ export const Home: React.FC = () => {
           <Button text="Contact" />
           <Button text="Resume" />
         </ButtonBox>
+        <RandomText skills={Skills} />
       </Welcome>
-      <RandomText skills={Skills} />
     </>
   );
 };
